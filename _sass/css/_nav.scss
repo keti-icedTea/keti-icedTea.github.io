@@ -3,9 +3,10 @@
   height: 70px;
   line-height: 70px;
   border-bottom: 1px solid rgb(232, 232, 232);
-  z-index: 1;
+  z-index: 10;
   position: fixed;
   top:0;
+  background-color: white;
 }
 
 .navi_logo {
@@ -18,12 +19,17 @@
   cursor:pointer;
 }
 
+.navi_menu_div i {
+  display: none;
+}
+
 .navi_menu_div {
   float:right;
   margin-right: 30px;
 }
 
 .navi_menu_div li {
+  background-color: white;
   float :left;
   font-size: 15px;
   display: inline-block;
@@ -61,7 +67,7 @@
 
 .navi_menu_child_div li{
   transition: 0.2s;
-  float :right;
+  float :left;
   cursor:pointer;
   width: 100%;
   display: inline-block;
@@ -78,4 +84,61 @@
 
 .navi_hidden {
   display: none;
+}
+
+.navi_blackShield {
+  display: none;
+}
+
+@media(max-width:1024px) {
+  .navi_menu_div li {
+    width: 110px;
+    font-size: 13px;
+  }
+
+  .navi_menu_child_div {
+    height: 45px;
+    line-height: 45px;
+    font-size: 10.5px;
+  }
+}
+
+@media(max-width:768px) {
+  .navi_menu_div i {
+    display:inline-block;
+    position: fixed;
+    font-size: 30px;
+    color:$primary;
+    cursor:pointer;
+    right:20px;
+    top:25px;
+  }
+
+  .navi_menu_count_6 li { width:calc(100% / 2);}
+
+  .navi_blackShield{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0,0.6);
+    z-index: 9;
+    position:fixed;
+    top:0;
+    left:0;
+  }
+
+  .navi_hidden3 {
+    display: none !important;
+  }
+
+  .navi_ul {
+    overflow-y: hidden;
+    width: 100vw;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .navi_menu_div li {
+    width: 25vw;
+  }
 }
