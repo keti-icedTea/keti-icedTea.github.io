@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% include header.html %}
+<body>
+{% assign current = page.url | downcase | split: '/' %}
+{% include nav.html %}
+<main>
+  {{ content }}
+</main>
+
+</body>
+</html>
